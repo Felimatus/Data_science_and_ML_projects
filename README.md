@@ -18,6 +18,7 @@ These projects are intended to showcase practical skills to recruiters and hirin
 
 ## Repository Structure
 
+```
 Data_science_and_ML_projects/
 │
 ├── Kaggle_Titanic_survival_prediction/
@@ -27,6 +28,7 @@ Data_science_and_ML_projects/
 │ └── Real-world data cleaning and quality assessment project
 │
 └── README.md
+```
 
 ## Projects
 
