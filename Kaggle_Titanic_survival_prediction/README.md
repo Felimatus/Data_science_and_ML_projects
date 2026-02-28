@@ -100,12 +100,14 @@ Final Kaggle Public Score: **0.76315**
 
 ## Repository Structure
 
+```
 ├── Titanic_survival_prediction.ipynb
 ├── README.md
 ├── Data
 	├── train.csv
 	├── test.csv
 	└── submission_titanic.csv
+```
 
 ## Key Learning Outcomes
 
