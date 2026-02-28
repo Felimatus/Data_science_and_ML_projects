@@ -1,0 +1,9 @@
+# Jupyter
+.ipynb_checkpoints/
+
+# Generated outputs
+Data/submission*.csv
+
+# Python cache
+__pycache__/
+*.pyc
