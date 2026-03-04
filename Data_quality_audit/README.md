@@ -11,7 +11,7 @@ The objective was to identify and document at least 8 errors, inconsistencies, a
 Four CSV files representing a retail sales system (anonymised):
 
 | File | Rows | Description |
-|------|------|-------------|
+| --- | --- | --- |
 | `zones.csv` | 2 | Price zones (Hypermarket, Supermarket) |
 | `sites.csv` | 5 | Store locations, each assigned to a zone |
 | `articles.csv` | 15 | Product catalogue |
@@ -34,22 +34,26 @@ Every finding was pinned to a specific date range and a specific site or zone, m
 
 9 data quality issues were identified (exceeding the required minimum of 8), grouped below by likely root cause:
 
-**Referential integrity**
+### Referential integrity
+
 - `SiteId = 9` appears in 253 records (Nov 2018) — site does not exist in `sites.csv`
 - Those same records carry a mismatched `ZoneId`, placing stores in the wrong pricing group
 
-**Missing values — data pipeline failures**
+### Missing values — data pipeline failures
+
 - 27 records with missing `CostPrice` at SiteId 5, March 1–15, 2019
 - 13 records with missing `Price` at SiteId 4, April 1–15, 2019
 - Both gaps span exactly 14 days, suggesting a recurring pipeline failure pattern
 
-**Business logic violations**
+### Business logic violations
+
 - 358 records with negative margin (May 13–20, 2019) — cost price exceeds selling price
 - 492 duplicate records for SiteId 8 during April 2019
 - 820 records (~4.6%) with negative quantities (Feb 1–18, 2019) — likely untagged returns
 - 788 combinations of (ArticleId, Date, ZoneId) where sites in the same zone charged different prices — a direct violation of the zone pricing rule
 
-**Anomalies**
+### Anomalies
+
 - `Quantity` stored as `float64` and `Date` stored as `object` instead of their correct types
 - Extreme outlier quantities requiring business validation (e.g., 432 units of a single product in one day)
 
