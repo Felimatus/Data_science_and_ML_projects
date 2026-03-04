@@ -27,6 +27,9 @@ Data_science_and_ML_projects/
 ├── Data_quality_audit/
 │ └── Real-world data cleaning and quality assessment project
 │
+├── Order_Rohlik/
+│ └── Grocery category prediction from personal Rohlik order history
+│
 └── README.md
 ```
 
@@ -56,6 +59,20 @@ Technologies: Python, Pandas, Scikit-learn, XGBoost, Matplotlib
 - Documentation of findings
 
 Technologies: Python, Pandas, Jupyter Notebook
+
+---
+
+### 3. Order Rohlik
+
+**Folder:** `Order_Rohlik`
+
+- Predicts which grocery categories you are likely to buy in your next Rohlik order, based on your personal order history
+- Multi-label binary classification: one XGBoost model per category
+- Features: month, day of week, days since last order, and per-category quantities from the previous two orders (lag-1, lag-2)
+- Probability threshold tuned on a validation set to match your average number of categories per order
+- Fetches product category data from the Rohlik API
+
+Technologies: Python, XGBoost, Pandas, Rohlik API
 
 ---
 
