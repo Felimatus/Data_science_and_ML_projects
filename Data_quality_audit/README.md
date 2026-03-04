@@ -54,7 +54,7 @@ Every finding was pinned to a specific date range and a specific site or zone, m
 
 ### Anomalies
 
-- `Quantity` stored as `float64` and `Date` stored as `object` instead of their correct types
+- `Quantity` stored as `float64` instead of `int64` (all values are integers — dtype mismatch only). Note: `Date` being `object` (string) is expected from CSV loading and is not a data quality error.
 - Extreme outlier quantities requiring business validation (e.g., 432 units of a single product in one day)
 
 Full analysis, code, and commentary are in `Data_quality_audit.ipynb`.
@@ -84,7 +84,6 @@ jupyter notebook Data_quality_audit.ipynb
 ## Files
 
 - `Data_quality_audit.ipynb` — Main analysis notebook (all findings, code, and commentary)
-- `Data_analysis_assignment.pdf` — Original written report submitted during the assignment
 - `Data/` — Source CSV files (`zones.csv`, `sites.csv`, `articles.csv`, `sales.csv`)
 
 ## Future Improvements
