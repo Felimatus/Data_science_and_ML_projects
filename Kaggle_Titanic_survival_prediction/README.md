@@ -31,11 +31,13 @@ Main features include:
 The project follows a complete machine learning pipeline:
 
 ### 1. Exploratory Data Analysis (EDA)
+
 - Analysis of survival rates by gender, class, and age
 - Visualization of feature distributions
 - Identification of important patterns and correlations
 
 ### 2. Feature Engineering
+
 - Creation of `FamilySize` from `SibSp` and `Parch`
 - Extraction of titles from passenger names
 - Creation of `TicketGroupSize` from ticket frequency
@@ -44,11 +46,13 @@ The project follows a complete machine learning pipeline:
 - Removal of irrelevant or noisy features
 
 ### 3. Preprocessing
+
 - Categorical encoding
 - Feature scaling
 - Use of transformation pipelines to prevent data leakage
 
 ### 4. Modeling
+
 Multiple classification models were trained and optimized using `RandomizedSearchCV`:
 
 - SGDClassifier
@@ -61,6 +65,7 @@ Multiple classification models were trained and optimized using `RandomizedSearc
 A Voting Classifier was also evaluated.
 
 ### 5. Evaluation
+
 - Cross-validation using accuracy
 - Model comparison based on mean performance and stability
 - Final model selection based on validation and CV results
@@ -69,15 +74,15 @@ A Voting Classifier was also evaluated.
 
 ## Results
 
-| Model                     | CV Accuracy | Std  |
-|---------------------------|-------------|------|
-| SGDClassifier             | ~83.2%      | 0.012 |
-| Logistic Regression       | ~83.4%      | 0.013 |
-| Random Forest             | ~82.6%      | 0.017 |
-| Extra Trees               | ~81.8%      | 0.020 |
-| Gradient Boosting         | ~84.7%      | 0.015 |
-| **Extreme Gradient Boosting** | **~85.6%** | **0.018** |
-| Voting Classifier         | ~84.7%      | 0.015 |
+| Model                         | CV Accuracy | Std       |
+|-------------------------------|-------------|-----------|
+| SGDClassifier                 | ~83.2%      | 0.012     |
+| Logistic Regression           | ~83.4%      | 0.013     |
+| Random Forest                 | ~82.6%      | 0.017     |
+| Extra Trees                   | ~81.8%      | 0.020     |
+| Gradient Boosting             | ~84.7%      | 0.015     |
+| **Extreme Gradient Boosting** | **~85.6%**  | **0.018** |
+| Voting Classifier             | ~84.7%      | 0.015     |
 
 Final Kaggle Public Score: **0.76315**
 
@@ -93,20 +98,20 @@ Final Kaggle Public Score: **0.76315**
 - SciPy
 - Scikit-learn
 - XGBoost
-- Matplotlib 
+- Matplotlib
 - Jupyter Notebook
 
 ---
 
 ## Repository Structure
 
-```
+```text
 ├── Titanic_survival_prediction.ipynb
 ├── README.md
 ├── Data
-	├── train.csv
-	├── test.csv
-	└── submission_titanic.csv
+    ├── train.csv
+    ├── test.csv
+    └── submission_titanic.csv
 ```
 
 ## Key Learning Outcomes
@@ -129,6 +134,7 @@ Final Kaggle Public Score: **0.76315**
 ---
 
 ## Setup
+
 In case you want to run the notebook:
 
 ```bash

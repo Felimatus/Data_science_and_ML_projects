@@ -18,7 +18,7 @@ These projects are intended to showcase practical skills to recruiters and hirin
 
 ## Repository Structure
 
-```
+```text
 Data_science_and_ML_projects/
 │
 ├── Kaggle_Titanic_survival_prediction/
