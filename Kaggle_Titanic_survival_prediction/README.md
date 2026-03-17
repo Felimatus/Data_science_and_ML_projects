@@ -62,7 +62,7 @@ Multiple classification models were trained and optimized using `RandomizedSearc
 - Gradient Boosting
 - Extreme Gradient Boosting
 
-A Voting Classifier was also evaluated.
+A Voting and a Stacking Classifier were also evaluated.
 
 ### 5. Evaluation
 
@@ -74,19 +74,16 @@ A Voting Classifier was also evaluated.
 
 ## Results
 
-| Model                         | CV Accuracy | Std       |
-|-------------------------------|-------------|-----------|
-| SGDClassifier                 | ~83.2%      | 0.012     |
-| Logistic Regression           | ~83.4%      | 0.013     |
-| Random Forest                 | ~82.6%      | 0.017     |
-| Extra Trees                   | ~81.8%      | 0.020     |
-| Gradient Boosting             | ~84.7%      | 0.015     |
-| **Extreme Gradient Boosting** | **~85.6%**  | **0.018** |
-| Voting Classifier             | ~84.7%      | 0.015     |
-
-Final Kaggle Public Score: **0.76315**
-
-**Extreme Gradient Boosting** was selected as the final model due to its highest mean cross-validated accuracy.
+| Model                         | Public score |
+|-------------------------------|--------------|
+| SGDClassifier                 | 0.77511      |
+| Logistic Regression           | 0.77272      |
+| Random Forest                 | 0.77272      |
+| Extra Trees                   | **0.77990**  |
+| Gradient Boosting             | 0.76076      |
+| Extreme Gradient Boosting     | 0.76076      |
+| Voting Classifier             | 0.77033      |
+| Stacking Classifier           | 0.76315      |
 
 ---
 
