@@ -43,7 +43,6 @@ Data_science_and_ML_projects/
 - End-to-end machine learning pipeline
 - Feature engineering and model comparison
 - Cross-validation and Kaggle submission
-- **Kaggle public score: 0.76315**
 
 Technologies: Python, Pandas, Scikit-learn, XGBoost, Matplotlib
 
