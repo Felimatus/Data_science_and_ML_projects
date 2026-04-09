@@ -15,6 +15,9 @@ venv/
 # PyTorch Lightning
 lightning_logs/
 
+# Cache
+*.sqlite
+
 # OS
 .DS_Store
 Thumbs.db
