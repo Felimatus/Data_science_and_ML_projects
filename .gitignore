@@ -12,6 +12,9 @@ __pycache__/
 env/
 venv/
 
+# PyTorch Lightning
+lightning_logs/
+
 # OS
 .DS_Store
 Thumbs.db

@@ -21,6 +21,9 @@ These projects are intended to showcase practical skills to recruiters and hirin
 ```text
 Data_science_and_ML_projects/
 │
+├── Energy_demand/
+│ └── 14-day electricity demand forecasting for Czech Republic (LSTM, GRU, WaveNet, TFT)
+│
 ├── Kaggle_Titanic_survival_prediction/
 │ └── Survival prediction using classification models
 │
@@ -35,7 +38,21 @@ Data_science_and_ML_projects/
 
 ## Projects
 
-### 1. Kaggle Titanic Survival Prediction
+### 1. Electricity Demand Forecasting — Czech Republic
+
+**Folder:** `Energy_demand`
+
+- Forecasts daily electricity demand 14 days ahead using deep learning
+- Compares 4 architectures: Bidirectional LSTM, Bidirectional GRU, WaveNet, and Temporal Fusion Transformer (TFT)
+- Multi-framework: TensorFlow/Keras (LSTM, GRU, WaveNet) + PyTorch (TFT)
+- 54 features: weather from 5 regions (population-weighted), temporal, energy crisis flag, lagged load
+- Best model: TFT with MAE of 135 MW (1.92% MAPE)
+
+Technologies: Python, TensorFlow, PyTorch, pytorch-forecasting, Pandas, ENTSO-E API, Open-Meteo API
+
+---
+
+### 2. Kaggle Titanic Survival Prediction
 
 **Folder:** `Kaggle_Titanic_survival_prediction`
 
@@ -48,7 +65,7 @@ Technologies: Python, Pandas, Scikit-learn, XGBoost, Matplotlib
 
 ---
 
-### 2. Data Quality Audit
+### 3. Data Quality Audit
 
 **Folder:** `Data_quality_audit`
 
@@ -61,7 +78,7 @@ Technologies: Python, Pandas, Jupyter Notebook
 
 ---
 
-### 3. Order Rohlik
+### 4. Order Rohlik
 
 **Folder:** `Order_Rohlik`
 
@@ -80,9 +97,11 @@ Technologies: Python, XGBoost, Pandas, Rohlik API
 - Data preprocessing and cleaning
 - Exploratory Data Analysis (EDA)
 - Feature engineering
-- Machine learning modeling
+- Machine learning modeling (classical and deep learning)
+- Deep learning with TensorFlow/Keras and PyTorch
+- Time series forecasting
 - Hyperparameter tuning
-- Model evaluation
+- Model evaluation and comparison
 - Technical documentation
 
 ---

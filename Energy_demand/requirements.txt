@@ -1,0 +1,14 @@
+entsoe_py~=0.7.11
+holidays~=0.94
+lightning~=2.6.1
+matplotlib~=3.10.8
+numpy~=2.4.4
+openmeteo_requests~=1.7.5
+pandas~=3.0.2
+python-dotenv~=1.2.2
+pytorch_forecasting~=1.7.0
+requests_cache~=1.3.1
+retry_requests~=2.0.0
+scikit_learn~=1.8.0
+tensorflow~=2.20.0
+torch~=2.10.0
