@@ -33,6 +33,9 @@ Data_science_and_ML_projects/
 ├── Order_Rohlik/
 │ └── Grocery category prediction from personal Rohlik order history
 │
+├── Kaggle_ROGII_Wellbore_Geology_Prediction/
+│ └── TVT prediction for horizontal wellbores (beam search, DTW, particle filters, GBDT ensemble)
+│
 └── README.md
 ```
 
@@ -89,6 +92,21 @@ Technologies: Python, Pandas, Jupyter Notebook
 - Fetches product category data from the Rohlik API
 
 Technologies: Python, XGBoost, Pandas, Rohlik API
+
+---
+
+### 5. Kaggle ROGII Wellbore Geology Prediction
+
+**Folder:** `Kaggle_ROGII_Wellbore_Geology_Prediction`
+
+- Predicts True Vertical Thickness (TVT) for horizontal wellbore survey points in a Kaggle code competition
+- Physics-based feature engineering: 7-configuration beam search, multi-scale DTW alignment, dual particle filters (ANCC + Z-aware), normalized cross-correlation, spatial imputers
+- 223 engineered features per survey point combining geophysical signals, GR statistics, formation surfaces, and cross-signal consensus
+- Bucketed GBDT ensemble: 18 models (LightGBM + CatBoost + XGBoost) with hill climbing stacker and Optuna post-processing
+- Cal-zone augmentation and online test-well training for data efficiency
+- Public Score: 11.750 RMSE
+
+Technologies: Python, LightGBM, CatBoost, XGBoost, Numba, Optuna, SciPy, scikit-learn, Pandas
 
 ---
 
