@@ -1,0 +1,9 @@
+ftfy==6.3.1
+joblib==1.5.3
+lightgbm==4.6.0
+lingua==4.16.2
+matplotlib==3.11.0
+numpy==2.5.0
+pandas==3.0.3
+scikit_learn==1.9.0
+scipy==1.18.0

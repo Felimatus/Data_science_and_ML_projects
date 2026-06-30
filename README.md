@@ -36,6 +36,9 @@ Data_science_and_ML_projects/
 ├── Kaggle_ROGII_Wellbore_Geology_Prediction/
 │ └── TVT prediction for horizontal wellbores (beam search, DTW, particle filters, GBDT ensemble)
 │
+├── Book_recommender/
+│ └── Item-seeded book recommender (hybrid of 5 models via RRF) + productionalization architecture
+│
 └── README.md
 ```
 
@@ -107,6 +110,20 @@ Technologies: Python, XGBoost, Pandas, Rohlik API
 - Public Score: 11.750 RMSE
 
 Technologies: Python, LightGBM, CatBoost, XGBoost, Numba, Optuna, SciPy, scikit-learn, Pandas
+
+---
+
+### 6. Book Recommender
+
+**Folder:** `Book_recommender`
+
+- Take-home task: *"I like Lord of the Rings, what else should I read?"* — an item-seeded recommender that takes a single book title (no user history) and returns similar books
+- Built on the Book-Crossing dataset (~50k books, ~284k ratings), cleaned and enriched with OpenLibrary metadata (Subjects, Language, Year)
+- Five base models — Item-CF, Content-based (TF-IDF), SVD latent factors, User-CF, and LightGBM — combined via Reciprocal Rank Fusion (RRF)
+- Own implementations with custom robustness fixes: edition pooling, significance weighting, same-work/series diversity filtering, and language scoping
+- Final model packaged for serving in `hybrid_model.py`; includes a productionalization architecture (online FastAPI + Redis cache, offline Airflow/MLflow retraining pipeline)
+
+Technologies: Python, scikit-learn, SciPy, LightGBM, Pandas, NumPy, OpenLibrary API; FastAPI/Redis/S3/MLflow (architecture)
 
 ---
 
